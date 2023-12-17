@@ -4,7 +4,7 @@ describe("login_account_testcase", () => {
        
        cy.get("[href='https://www.kapruka.com/shops/customerAccounts/accountLogin.jsp']", { timeout: 10000 }).click()
        
-       cy.url().should('include', 'https://www.kapruka.com/shops/customerAccounts/accountLogin.jsp'); // Verify that the URL has changed after clicking the link
+       cy.url().should('include', 'https://www.kapruka.com/shops/customerAccounts/accountLogin.jsp')// Verify that the URL has changed after clicking the link
  
       
        
@@ -13,7 +13,7 @@ describe("login_account_testcase", () => {
        cy.get("[name='password']").should('have.value',"createAccT@1")
        
 
-       cy.get("input.btn.btn-lg.btn-primary.space-bot.blocksButton").click();
+       cy.get("input.btn.btn-lg.btn-primary.space-bot.blocksButton").click()
        
 
     })

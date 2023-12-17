@@ -27,12 +27,47 @@ describe('Assertions demo', () => {
     cy.xpath("//script").should("have.length",'28')//check the no of links
     //cy.xpath("//script").should("have.length",28)//check the no of links
     
+        
+   })
+
+
+   it("Explicit Assertions", () => {
+    cy.visit("https://www.kapruka.com/?gad_source=1&gclid=Cj0KCQiA7OqrBhD9ARIsAK3UXh074LUReaY2He4bDI4mute0O8-pzW5_SIdEDz3jomt0VkkMZTHPwdkaArlzEALw_wcB")
     
+    cy.get("[href='https://www.kapruka.com/shops/customerAccounts/accountLogin.jsp']", { timeout: 10000 }).click()
     
+    cy.url().should('include', 'https://www.kapruka.com/shops/customerAccounts/accountLogin.jsp') // Verify that the URL has changed after clicking the link
+
+   
+    cy.get("[name='email']").should('be.visible').type("yashhettiarachchi8@gmail.com")
+    cy.get("[name='password']").should('be.visible').type("createAccT@1")
+    cy.get("[name='password']").should('have.value',"createAccT@1")
+    
+
+    cy.get("input.btn.btn-lg.btn-primary.space-bot.blocksButton").click()
+
+    let expName="Yashini Hettiarachchi"
+    cy.xpath("/html/body/div[2]/div/div/div/div[1]/div/h1").then( (x)=>{
+        let actName=x.text()
+                
+        //BDD Style
+        expect(actName).to.equal(expName)
+        //expect(actName).to.not.equal(expName)
+
+        //TDD Style
+        assert.equal(actName, expName)
+        //assert.notEqual(actName, expName)
+        
 
 
 
     })
+
+    
+
+    
+   })
+    
     
 
 })
