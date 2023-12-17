@@ -63,8 +63,7 @@ These are some of the common ways to use XPath in web development and testing. T
       cy.wait(2000)
       cy.get("#addtocartbutton").click()
 
-
-
+      
      
       
     })
