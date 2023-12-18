@@ -1,4 +1,3 @@
-import { should } from "chai"
 
 describe('Assertions demo', () => {
     
@@ -53,13 +52,13 @@ describe('Assertions demo', () => {
 
     let expName="Yashini Hettiarachchi"
     cy.xpath("/html/body/div[2]/div/div/div/div[1]/div/h1").then( (x)=>{
-        let actName=x.text()
+    let actName=x.text()
                 
-        //BDD Style
+         //BDD Style
         expect(actName).to.equal(expName)
         //expect(actName).to.not.equal(expName)
 
-        //TDD Style
+         //TDD Style
         assert.equal(actName, expName)
         //assert.notEqual(actName, expName)
         
