@@ -62,7 +62,7 @@ These are some of the common ways to use XPath in web development and testing. T
       cy.xpath("//div[@class='catalogueV2Button']").eq(1).click()
       cy.wait(2000)
       cy.get("#addtocartbutton").click()
-
+      
       
      
       

@@ -1,3 +1,5 @@
+import { should } from "chai"
+
 describe('Assertions demo', () => {
     
     it('Implicit Assertions', () => {
@@ -30,6 +32,8 @@ describe('Assertions demo', () => {
         
    })
 
+   
+
 
    it("Explicit Assertions", () => {
     cy.visit("https://www.kapruka.com/?gad_source=1&gclid=Cj0KCQiA7OqrBhD9ARIsAK3UXh074LUReaY2He4bDI4mute0O8-pzW5_SIdEDz3jomt0VkkMZTHPwdkaArlzEALw_wcB")
@@ -42,6 +46,7 @@ describe('Assertions demo', () => {
     cy.get("[name='email']").should('be.visible').type("yashhettiarachchi8@gmail.com")
     cy.get("[name='password']").should('be.visible').type("createAccT@1")
     cy.get("[name='password']").should('have.value',"createAccT@1")
+    
     
 
     cy.get("input.btn.btn-lg.btn-primary.space-bot.blocksButton").click()

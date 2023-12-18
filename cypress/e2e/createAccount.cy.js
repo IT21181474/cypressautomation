@@ -4,11 +4,11 @@ describe("create_account_testcase", () => {
       
        cy.get("[href='https://www.kapruka.com/shops/customerAccounts/accountLogin.jsp']", { timeout: 10000 }).click()
       
-       cy.url().should('include', 'https://www.kapruka.com/shops/customerAccounts/accountLogin.jsp'); // Verify that the URL has changed after clicking the link
+       cy.url().should('include', 'https://www.kapruka.com/shops/customerAccounts/accountLogin.jsp') // Verify that the URL has changed after clicking the link
 
        cy.contains('Create Account').click(); // Replace 'Create Account' with the actual text on the button
 
-       cy.url().should('include', 'https://www.kapruka.com/shops/customerAccounts/accountNew.jsp?origination=regular'); // Verify that the URL has changed after clicking the link
+       cy.url().should('include', 'https://www.kapruka.com/shops/customerAccounts/accountNew.jsp?origination=regular')// Verify that the URL has changed after clicking the link
       
        cy.get("[name='firstName']").should('be.visible').type("Yashini")
        cy.get("[name='lastName']").should('be.visible').type("John")
@@ -17,6 +17,6 @@ describe("create_account_testcase", () => {
        cy.get("[name='password']").should('be.visible').type("Password@123")
        cy.get("[name='confirmPassword']").should('be.visible').type("Password@123")
 
-       cy.contains('Create Account').click(); // Replace 'Create Account' with the actual text on the button
-    });
-});
+       cy.contains('Create Account').click()// Replace 'Create Account' with the actual text on the button
+    })
+})
